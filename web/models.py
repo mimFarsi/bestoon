@@ -9,7 +9,7 @@ class Expense(models.Model):
     date = models.DateTimeField()
     user = models.ForeignKey(User, on_delete = models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         return '{}-{}'.format(self.text, self.amount)
 
 class Income(models.Model):
@@ -18,5 +18,5 @@ class Income(models.Model):
     amount = models.BigIntegerField()
     user = models.ForeignKey(User, on_delete = models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         return '{}-{}'.format(self.text, self.amount)
